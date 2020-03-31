@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME = box
+export PYBUILD_TEST_ARGS_python3=test/test_unittests_box.py
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
