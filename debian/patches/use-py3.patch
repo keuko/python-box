@@ -1,0 +1,47 @@
+Description: Fixed shebangs to python3
+ as dh_python3 --shebang=/usr/bin/python3
+ was not working everywhere.
+Author: Michal Arbet <michal.arbet@ultimum.io>
+Forwarded: not-needed
+Last-Update: 2020-03-31
+
+diff --git a/box.py b/box.py
+index 94e3def..ead3a8e 100644
+--- a/box.py
++++ b/box.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ # -*- coding: UTF-8 -*-
+ #
+ # Copyright (c) 2017-2019 - Chris Griffith - MIT License
+diff --git a/setup.py b/setup.py
+index 5eaef7b..3a76663 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ # -*- coding: utf-8 -*-
+ 
+ from setuptools import setup
+diff --git a/test/test_functional_box.py b/test/test_functional_box.py
+index 8db60ab..5f02571 100644
+--- a/test/test_functional_box.py
++++ b/test/test_functional_box.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ # -*- coding: UTF-8 -*-
+ # Test files gathered from json.org and yaml.org
+ from __future__ import absolute_import
+diff --git a/test/test_unittests_box.py b/test/test_unittests_box.py
+index 8dbf6e0..146d73c 100644
+--- a/test/test_unittests_box.py
++++ b/test/test_unittests_box.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ # -*- coding: UTF-8 -*-
+ from __future__ import absolute_import
+ 
